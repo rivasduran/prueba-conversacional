@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat de Ventas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="whatsapp-container">
+        <!-- Header -->
+        <div class="chat-header">
+            <div class="profile">
+                <div class="avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="profile-info">
+                    <h3>Asistente de Ventas</h3>
+                    <p>En línea</p>
+                </div>
+            </div>
+            <div class="actions">
+                <button id="reset-chat">
+                    <i class="fas fa-redo"></i> Reiniciar
+                </button>
+            </div>
+        </div>
+        
+        <!-- Chat body -->
+        <div class="chat-body" id="chat-messages">
+            <!-- Los mensajes se añadirán dinámicamente aquí -->
+        </div>
+        
+        <!-- Chat input -->
+        <div class="chat-input">
+            <input type="text" id="message-input" placeholder="Escribe un mensaje...">
+            <button id="send-btn">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>
